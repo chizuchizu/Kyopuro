@@ -50,7 +50,7 @@ class IP:
         return [self.input() for _ in range(n)]
 
 
-class idea:
+class Idea:
     def __init__(self):
         pass
 
@@ -71,6 +71,7 @@ class idea:
 
 def main():
     ip = IP()
+    id = Idea()
 
 
 main()
