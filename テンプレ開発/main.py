@@ -50,6 +50,22 @@ class IP:
         return [self.input() for _ in range(n)]
 
 
+class idea:
+    def __init__(self):
+        pass
+
+    def HF(self, p):
+        """
+        Half enumeration
+        半分全列挙です
+        pの要素の和の組み合わせを作ります。
+        ソート、重複削除行います
+        :param p: list : 元となるリスト
+        :return: list : 組み合わせられた和のリスト
+        """
+        return sorted(set(p[i] + p[j] for i in range(len(p)) for j in range(i, len(p))))
+
+
 """ここからメインコード"""
 
 
