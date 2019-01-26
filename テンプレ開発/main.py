@@ -65,11 +65,34 @@ class Idea:
         """
         return sorted(set(p[i] + p[j] for i in range(len(p)) for j in range(i, len(p))))
 
+    def Bfs2(A):
+        """
+        bit_full_search2
+        :return:
+        """
+        # https://blog.rossywhite.com/2018/08/06/bit-search/
+        value = []
+        for i in range(1 << len(A)):
+            output = []
+
+            for j in range(len(A)):
+                if ((i >> j) & 1) == 1:
+                    # output.append(A[j])
+                    output.append(A[j])
+            value.append([format(i, 'b').zfill(16), sum(output)])
+
+        value.sort(key=lambda x: x[1])
+        bin = [value[k][0] for k in range(len(value))]
+        val = [value[k][1] for k in range(len(value))]
+        return bin, val
+
 
 """ここからメインコード"""
 
 
 def main():
+    # 1文字に省略
+    r, e = range(), enumerate()
     ip = IP()
     id = Idea()
 
