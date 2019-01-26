@@ -1,5 +1,8 @@
 # coding: utf-8
 import sys
+# import bisect
+# import math
+# import numpy as np
 
 
 """Template"""
@@ -17,7 +20,7 @@ class IP:
         1文字の取得に使います
         :return: 数
         """
-        return int(input())
+        return int(self.input())
 
     def IL(self):
         """
