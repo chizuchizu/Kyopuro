@@ -69,7 +69,8 @@ class Idea:
         """
         bit_full_search2
         bit全探索の改良版
-        :return: list２つ
+        全探索させたら2進数のリストと10進数のリストを返す
+        :return: list２つ : １個目 2進数(16桁)  2個目 10進数
         """
         # 参考
         # https://blog.rossywhite.com/2018/08/06/bit-search/
@@ -96,7 +97,7 @@ class Idea:
 
 def main():
     # 1文字に省略
-    r, e = range(), enumerate()
+    r, e = range, enumerate
     ip = IP()
     id = Idea()
 
