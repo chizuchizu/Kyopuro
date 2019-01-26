@@ -83,7 +83,7 @@ class Idea:
             output = []
 
             for j in range(len(a)):
-                if ((i >> j) & 1) == 1:
+                if self.bit_o(i, j):
                     """右からj+1番目のiが1かどうか判定"""
                     # output.append(a[j])
                     output.append(a[j])
@@ -101,6 +101,26 @@ class Idea:
         :return: 昇順ソートしたリスト
         """
         return s.sort(reverse=True)
+
+    def bit_n(self, a, b):
+        """
+        bit探索で使います。0以上のときにTrue出します
+        自然数だからn
+        :param a: int
+        :param b: int
+        :return: bool
+        """
+        return bool((a >> b & 1) > 0)
+
+    def bit_o(self, a, b):
+        """
+        bit探索で使います。1のときにTrue出すよ
+        oneで1
+        :param a: int
+        :param b: int
+        :return: bool
+        """
+        return bool(((a >> b) & 1) == 1)
 
 
 """ここからメインコード"""
