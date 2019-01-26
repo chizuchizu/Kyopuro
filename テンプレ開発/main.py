@@ -97,9 +97,11 @@ class Idea:
     def SR(self, s):
         """
         昇順ソート（reverse書くのが面倒
+        返り値はありません。注意して下さい。
+        SR(s) と書いたらsが昇順ソートされるだけです。
         Sort Reverse
         :param s: ソートしたいリスト
-        :return: 昇順ソートしたリスト
+        :return: None
         """
         s.sort(reverse=True)
 
