@@ -65,20 +65,24 @@ class Idea:
         """
         return sorted(set(p[i] + p[j] for i in range(len(p)) for j in range(i, len(p))))
 
-    def Bfs2(A):
+    def Bfs2(self, a):
         """
         bit_full_search2
-        :return:
+        bit全探索の改良版
+        :return: list２つ
         """
+        # 参考
         # https://blog.rossywhite.com/2018/08/06/bit-search/
+        # https://atcoder.jp/contests/abc105/submissions/4088632
         value = []
-        for i in range(1 << len(A)):
+        for i in range(1 << len(a)):
             output = []
 
-            for j in range(len(A)):
+            for j in range(len(a)):
                 if ((i >> j) & 1) == 1:
-                    # output.append(A[j])
-                    output.append(A[j])
+                    """右からj+1番目のiが1かどうか判定"""
+                    # output.append(a[j])
+                    output.append(a[j])
             value.append([format(i, 'b').zfill(16), sum(output)])
 
         value.sort(key=lambda x: x[1])
