@@ -101,7 +101,8 @@ class Idea:
         :param s: ソートしたいリスト
         :return: 昇順ソートしたリスト
         """
-        return sorted(s, reverse=True)
+        s.sort(reverse=True)
+        return s
 
     def bit_n(self, a, b):
         """
