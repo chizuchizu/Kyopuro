@@ -133,6 +133,14 @@ class Idea:
         """
         return -(-x//y)
 
+    def ave(self, a):
+        """
+        平均を求めます
+        :param a: list
+        :return: int
+        """
+        return sum(a) / len(a)
+
 
 """ここからメインコード"""
 
