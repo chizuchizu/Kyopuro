@@ -94,6 +94,14 @@ class Idea:
         val = [value[k][1] for k in range(len(value))]
         return bin, val
 
+    def SL(self, s):
+        """
+        昇順ソート（reverse書くのが面倒
+        :param s: ソートしたいリスト
+        :return: 昇順ソートしたリスト
+        """
+        return s.sort(reverse=True)
+
 
 """ここからメインコード"""
 
@@ -103,6 +111,8 @@ def main():
     r, e = range, enumerate
     ip = IP()
     id = Idea()
+
+    """この下から書いてね"""
 
 
 main()
