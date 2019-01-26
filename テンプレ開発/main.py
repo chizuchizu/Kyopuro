@@ -123,6 +123,16 @@ class Idea:
         """
         return bool(((a >> b) & 1) == 1)
 
+    def ceil(self, x, y):
+        """
+        Round up
+        小数点切り上げ割り算
+        :param x: int
+        :param y: int
+        :return: int
+        """
+        return -(-x//y)
+
 
 """ここからメインコード"""
 
