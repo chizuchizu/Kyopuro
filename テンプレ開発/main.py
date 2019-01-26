@@ -102,7 +102,6 @@ class Idea:
         :return: 昇順ソートしたリスト
         """
         s.sort(reverse=True)
-        return s
 
     def bit_n(self, a, b):
         """
