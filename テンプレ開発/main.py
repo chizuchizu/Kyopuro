@@ -94,7 +94,7 @@ class Idea:
         val = [value[k][1] for k in range(len(value))]
         return bin, val
 
-    def SL(self, s):
+    def SR(self, s):
         """
         昇順ソート（reverse書くのが面倒
         :param s: ソートしたいリスト
