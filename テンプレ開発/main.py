@@ -18,9 +18,16 @@ class IP:
     def I(self):
         """
         1文字の取得に使います
-        :return: 数
+        :return: int
         """
         return int(self.input())
+
+    def S(self):
+        """
+        1文字の取得(str
+        :return: str
+        """
+        return self.input()
 
     def IL(self):
         """
