@@ -59,6 +59,15 @@ class IP:
         """
         return [self.input() for _ in range(n)]
 
+    def SILS(self, n):
+        """
+        Some Int LineS
+        横に複数、縦にも複数
+        :param n: 行数
+        :return: list
+        """
+        return [self.IL() for _ in range(n)]
+
 
 class Idea:
     def __init__(self):
