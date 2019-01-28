@@ -110,16 +110,19 @@ class Idea:
         val = [value[k][1] for k in range(len(value))]
         return bin, val
 
-    def SR(self, s):
+    def S(self, s, r=0, m=-1):
         """
-        昇順ソート（reverse書くのが面倒
-        返り値はありません。注意して下さい。
-        SR(s) と書いたらsが昇順ソートされるだけです。
-        Sort Reverse
-        :param s: ソートしたいリスト
+        ソート関係行います。色々な設定あります。
+        :param s: 元となるリスト
+        :param r: reversするかどうか 0=False 1=True
+        :param m: （2次元配列）何番目のインデックスのソートなのか
         :return: None
         """
-        s.sort(reverse=True)
+        r = bool(r)
+        if m == -1:
+            s.sort(reverse=r)
+        else:
+            s.sort(reverse=r, key=lambda x: x[m])
 
     def bit_n(self, a, b):
         """
