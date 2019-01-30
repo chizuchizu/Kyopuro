@@ -68,6 +68,14 @@ class IP:
         """
         return [self.IL() for _ in range(n)]
 
+    def SSLS(self, n):
+        """
+        Some String LineS
+        :param n: 行数
+        :return: list
+        """
+        return [self.SL() for _ in range(n)]
+
 
 class Idea:
     def __init__(self):
